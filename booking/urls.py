@@ -31,7 +31,7 @@ urlpatterns = [
     path('bookings/cancel/<int:booking_id>/', views.CancelBooking.as_view(), name="cancel-booking"),
     path('bookings/modify/<int:booking_id>/', views.ModifyBooking.as_view(), name="modify-booking"),
 
-    path('profile/', Profile.as_view(), name="profile"),
+    path('profile/', views.Profile.as_view(), name="profile"),
 
     path('login/', obtain_jwt_token, name="login"),
     path('register/',  views.Register.as_view() , name="register"),

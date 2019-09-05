@@ -1,13 +1,13 @@
 from datetime import datetime
 
 from rest_framework import serializers
-
-from .models import Hotel, Booking
+# from django.contrib.auth import user
+from .models import Hotel, Booking, User
 
 
 class HotelsListSerializer(serializers.ModelSerializer):
 	details = serializers.HyperlinkedIdentityField(
-		view_name = "hotel-detail",
+		view_name = "hotel-details",
 		lookup_field = "id",
 		lookup_url_kwarg = "hotel_id"
 		)
